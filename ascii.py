@@ -23,3 +23,5 @@ take(player1,1)
 print(player1)
 def sort():
     for i in player1:
+
+        print('hi')
