@@ -15,13 +15,21 @@ def take(Y,i):
    for i in range(i):
         pick = random.choice(deck)
         deck.remove(pick)
-        Y.append([pick])
+        Y.append(pick)
 
 take(bot,10)
 print(bot)
 take(player1,1)
 print(player1)
-def sort():
-    for i in player1:
-
-        print('hi')
+def sort(Y):
+    move=input('which card would you like to move')
+    place=int(input('where would you like to move it?'))-1
+    Y.remove(move)
+    Y.insert(place, move)
+    return
+def place(Y):
+    discard=input('which card would you like to discard?')
+    Y.remove(discard)
+    deck.append(discard)
+    return
+def playable(Y):
